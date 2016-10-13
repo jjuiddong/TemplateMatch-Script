@@ -1,0 +1,234 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="..\match_proc\matchparser.cpp">
+      <Filter>match_proc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\match_proc\matchprocessor.cpp">
+      <Filter>match_proc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\match_proc\MatchResult.cpp">
+      <Filter>match_proc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\match_proc\matchthread.cpp">
+      <Filter>match_proc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\match_proc\matchmanager.cpp">
+      <Filter>match_proc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extra\featurematch.cpp">
+      <Filter>extra</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extra\rectcontour.cpp">
+      <Filter>extra</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extra\rectcontour2.cpp">
+      <Filter>extra</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extra\deskew.cpp">
+      <Filter>extra</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extra\screencapture.cpp">
+      <Filter>extra</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extra\linecontour.cpp">
+      <Filter>extra</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extra\utility2.cpp">
+      <Filter>extra</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extra\math\matrix44.cpp">
+      <Filter>extra\math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extra\math\plane.cpp">
+      <Filter>extra\math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extra\math\quaternion.cpp">
+      <Filter>extra\math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extra\math\ray.cpp">
+      <Filter>extra\math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extra\math\triangle.cpp">
+      <Filter>extra\math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extra\math\vector2.cpp">
+      <Filter>extra\math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extra\math\vector3.cpp">
+      <Filter>extra\math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extra\math\vector4.cpp">
+      <Filter>extra\math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extra\convertimage.cpp">
+      <Filter>extra</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extra\skewdetect.cpp">
+      <Filter>extra</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extra\RecognitionConfig.cpp">
+      <Filter>extra</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extra\config.cpp">
+      <Filter>extra</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extra\squarecontour.cpp">
+      <Filter>extra</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extra\detectpoint.cpp">
+      <Filter>extra</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extra\utility.cpp">
+      <Filter>extra</Filter>
+    </ClCompile>
+    <ClCompile Include="..\match_proc\tesseract\dictionary.cpp">
+      <Filter>match_proc\tesseract</Filter>
+    </ClCompile>
+    <ClCompile Include="..\match_proc\tesseract\dictionary2.cpp">
+      <Filter>match_proc\tesseract</Filter>
+    </ClCompile>
+    <ClCompile Include="..\match_proc\tesseract\errorcorrectcompare.cpp">
+      <Filter>match_proc\tesseract</Filter>
+    </ClCompile>
+    <ClCompile Include="..\match_proc\tesseract\scanner.cpp">
+      <Filter>match_proc\tesseract</Filter>
+    </ClCompile>
+    <ClCompile Include="..\match_proc\tesseract\tesswrapper.cpp">
+      <Filter>match_proc\tesseract</Filter>
+    </ClCompile>
+    <ClCompile Include="..\match_proc\matchscript.cpp">
+      <Filter>match_proc</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="..\match_proc\matchparser.h">
+      <Filter>match_proc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\match_proc\matchprocessor.h">
+      <Filter>match_proc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\match_proc\MatchResult.h">
+      <Filter>match_proc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\match_proc\matchthread.h">
+      <Filter>match_proc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\match_proc\imagematch.h">
+      <Filter>match_proc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\match_proc\matchmanager.h">
+      <Filter>match_proc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\match_proc\matchproc.h">
+      <Filter>match_proc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extra\featurematch.h">
+      <Filter>extra</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extra\rectcontour.h">
+      <Filter>extra</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extra\rectcontour2.h">
+      <Filter>extra</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extra\deskew.h">
+      <Filter>extra</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extra\screencapture.h">
+      <Filter>extra</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extra\linecontour.h">
+      <Filter>extra</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extra\utility2.h">
+      <Filter>extra</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extra\math\Math.h">
+      <Filter>extra\math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extra\math\mathutility.h">
+      <Filter>extra\math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extra\math\matrix44.h">
+      <Filter>extra\math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extra\math\plane.h">
+      <Filter>extra\math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extra\math\quaternion.h">
+      <Filter>extra\math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extra\math\ray.h">
+      <Filter>extra\math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extra\math\triangle.h">
+      <Filter>extra\math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extra\math\vector2.h">
+      <Filter>extra\math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extra\math\vector3.h">
+      <Filter>extra\math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extra\math\vector4.h">
+      <Filter>extra\math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extra\convertimage.h">
+      <Filter>extra</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extra\skewdetect.h">
+      <Filter>extra</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extra\RecognitionConfig.h">
+      <Filter>extra</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extra\config.h">
+      <Filter>extra</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extra\squarecontour.h">
+      <Filter>extra</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extra\detectpoint.h">
+      <Filter>extra</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extra\utility.h">
+      <Filter>extra</Filter>
+    </ClInclude>
+    <ClInclude Include="..\match_proc\tesseract\dictionary.h">
+      <Filter>match_proc\tesseract</Filter>
+    </ClInclude>
+    <ClInclude Include="..\match_proc\tesseract\dictionary2.h">
+      <Filter>match_proc\tesseract</Filter>
+    </ClInclude>
+    <ClInclude Include="..\match_proc\tesseract\errorcorrectcompare.h">
+      <Filter>match_proc\tesseract</Filter>
+    </ClInclude>
+    <ClInclude Include="..\match_proc\tesseract\scanner.h">
+      <Filter>match_proc\tesseract</Filter>
+    </ClInclude>
+    <ClInclude Include="..\match_proc\tesseract\tesswrapper.h">
+      <Filter>match_proc\tesseract</Filter>
+    </ClInclude>
+    <ClInclude Include="..\match_proc\matchscript.h">
+      <Filter>match_proc</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="match_proc">
+      <UniqueIdentifier>{24e30826-8966-4fbf-b4cf-d22f1b8746fa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="extra">
+      <UniqueIdentifier>{0c627f70-c25a-4b1c-95f9-857a9a4308e8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="extra\math">
+      <UniqueIdentifier>{a370d323-d141-4d3c-9ef6-7eace5bb2938}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="match_proc\tesseract">
+      <UniqueIdentifier>{28ff1f1c-b0ea-4b00-a0b6-4d4d1d71b31c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

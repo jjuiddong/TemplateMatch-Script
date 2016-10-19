@@ -1,6 +1,6 @@
 
 #include "stdafx.h"
-#include "matchparser.h"
+#include "match_parser.h"
 
 
 namespace cvproc {
@@ -670,6 +670,7 @@ string cParser::GetSymbol(const string &symbol, const bool recursive, const int 
 
 	return "";
 }
+
 
 vector<string>* cParser::GetSymbol2(const string &symbol)
 {

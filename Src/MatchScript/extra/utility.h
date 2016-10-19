@@ -213,3 +213,10 @@ namespace common {
 	}
 }
 
+
+namespace common {
+
+	bool CompareExtendName(const char *srcFileName, int srcStringMaxLength, const char *compareExtendName);
+	bool CollectFiles(const list<string> &findExt, const string &searchPath, OUT list<string> &out);
+
+}

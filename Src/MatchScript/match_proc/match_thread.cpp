@@ -1,7 +1,7 @@
 
 #include "stdafx.h"
-#include "matchthread.h"
-#include "matchprocessor.h"
+#include "match_thread.h"
+#include "match_processor.h"
 
 using namespace cv;
 using namespace cvproc;
@@ -38,14 +38,13 @@ unsigned __stdcall MatchThreadMain(void *ptr)
 
 	const Mat &input = matchResult->m_input;
 	const string inputName = matchResult->m_inputName;
-	const int inputImageId = matchResult->m_inputImageId;
 	const bool isRemoveInput = matchResult->m_removeInput;
-	cMatchScript2 *matchScript = matchResult->m_script;
+	cMatchScript *matchScript = matchResult->m_script;
 
 	matchResult->m_result = 0;
 	matchResult->m_resultStr = "~ fail ~";
 
-	matchScript->clearResultTree();
+	matchScript->ClearResultTree();
 	char nodeResults[1024]; // maximum 1024 nodes, -1:not visit, 0:fail, 1:success, 2:final success
 	memset(nodeResults, -1, sizeof(nodeResults));
 
@@ -236,7 +235,7 @@ unsigned __stdcall MatchThreadMain(void *ptr)
 	}
 
 	// 말단 노드 중, 가장 적합도가 높은 노드를 찾는다.
-	if (matchResult->m_traverseType == 1)
+	if (1 == matchResult->m_traverseType)
 	{
 		matchResult->m_result = 1; // m_traverseType=1 이면, 결과를 무조건 내게 되어있다.
 
@@ -262,7 +261,7 @@ unsigned __stdcall MatchThreadMain(void *ptr)
 	// 입력으로 저장되었던 정보를 제거한다.
 	if (isRemoveInput)
 	{
-		cMatchProcessor::Get()->RemoveInputImage(inputName, inputImageId);
+		matchResult->m_sharedData->RemoveInputImage(inputName);
 	}
 
 	return 0;
@@ -354,3 +353,4 @@ const sParseTree* FindMostFitnessNode(const cMatchResult &matchResult, OUT strin
 
 	return mostFitnessNode;
 }
+

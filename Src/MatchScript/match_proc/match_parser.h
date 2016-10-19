@@ -6,17 +6,21 @@
 //		- script variable 추가
 //		- symbol tree 추가
 //
+//
+// 2016-10-14
+//		- id = id 형태로 수정
+//
 // id = id
 // id:
-//		id, id, id, {id = id}
-//			id, id
+//		id=id id=id id=id {id = id}
+//			id=id id=id id=id {id = id}
 //				id
 //
 // - assigned_list
 // - assigend -> id = id | number
 // - tree_list
 // - tree_head -> id:
-// - tree -> id, id, {id = id}
+// - tree -> id=id id=id id=id {id = id}
 //
 #pragma once
 

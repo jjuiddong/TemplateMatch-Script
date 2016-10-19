@@ -9,11 +9,12 @@
 
 #include "tesseract/tesswrapper.h"
 #include "imagematch.h"
-#include "matchscript.h"
-#include "matchthread.h"
-#include "matchprocessor.h"
-#include "matchmanager.h"
-#include "MatchResult.h"
+#include "match_result.h"
+#include "match_script.h"
+#include "match_thread.h"
+#include "match_shareddata.h"
+#include "match_processor.h"
+#include "match_manager.h"
 
 
 

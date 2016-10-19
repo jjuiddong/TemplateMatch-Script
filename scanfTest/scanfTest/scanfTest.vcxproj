@@ -19,9 +19,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{E7398223-F17C-4703-8EC7-B3DCE8022BF8}</ProjectGuid>
+    <ProjectGuid>{DCA317F6-21E7-4E49-94A8-C22F2D80B04C}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>MatchScript_Console</RootNamespace>
+    <RootNamespace>scanfTest</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -71,28 +71,24 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <OutDir>$(SolutionDir)Bin\</OutDir>
-    <TargetName>$(ProjectName)_debug</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <OutDir>$(SolutionDir)Bin\</OutDir>
-    <TargetName>$(ProjectName)</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>D:\Project\tesseract\api;D:\Project\tesseract\ccutil;D:\Project\tesseract\ccstruct;D:\Project\tesseract\ccmain;D:\Project\tesseract\classify;D:\Project\tesseract\cube;D:\Project\tesseract\cutil;D:\Project\tesseract\neural_networks;D:\Project\tesseract\viewer;D:\Project\tesseract\wordrec;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -116,13 +112,13 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>D:\Project\tesseract\api;D:\Project\tesseract\ccutil;D:\Project\tesseract\ccstruct;D:\Project\tesseract\ccmain;D:\Project\tesseract\classify;D:\Project\tesseract\cube;D:\Project\tesseract\cutil;D:\Project\tesseract\neural_networks;D:\Project\tesseract\viewer;D:\Project\tesseract\wordrec;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -150,86 +146,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\extra\config.cpp" />
-    <ClCompile Include="..\extra\convertimage.cpp" />
-    <ClCompile Include="..\extra\deskew.cpp" />
-    <ClCompile Include="..\extra\detectpoint.cpp" />
-    <ClCompile Include="..\extra\featurematch.cpp" />
-    <ClCompile Include="..\extra\linecontour.cpp" />
-    <ClCompile Include="..\extra\math\matrix44.cpp" />
-    <ClCompile Include="..\extra\math\plane.cpp" />
-    <ClCompile Include="..\extra\math\quaternion.cpp" />
-    <ClCompile Include="..\extra\math\ray.cpp" />
-    <ClCompile Include="..\extra\math\triangle.cpp" />
-    <ClCompile Include="..\extra\math\vector2.cpp" />
-    <ClCompile Include="..\extra\math\vector3.cpp" />
-    <ClCompile Include="..\extra\math\vector4.cpp" />
-    <ClCompile Include="..\extra\RecognitionConfig.cpp" />
-    <ClCompile Include="..\extra\rectcontour.cpp" />
-    <ClCompile Include="..\extra\rectcontour2.cpp" />
-    <ClCompile Include="..\extra\screencapture.cpp" />
-    <ClCompile Include="..\extra\skewdetect.cpp" />
-    <ClCompile Include="..\extra\squarecontour.cpp" />
-    <ClCompile Include="..\extra\utility.cpp" />
-    <ClCompile Include="..\extra\utility2.cpp" />
-    <ClCompile Include="..\match_proc\match_manager.cpp" />
-    <ClCompile Include="..\match_proc\match_parser.cpp" />
-    <ClCompile Include="..\match_proc\match_processor.cpp" />
-    <ClCompile Include="..\match_proc\match_result.cpp" />
-    <ClCompile Include="..\match_proc\match_script.cpp" />
-    <ClCompile Include="..\match_proc\match_shareddata.cpp" />
-    <ClCompile Include="..\match_proc\match_thread.cpp" />
-    <ClCompile Include="..\match_proc\tesseract\dictionary.cpp" />
-    <ClCompile Include="..\match_proc\tesseract\dictionary2.cpp" />
-    <ClCompile Include="..\match_proc\tesseract\errorcorrectcompare.cpp" />
-    <ClCompile Include="..\match_proc\tesseract\scanner.cpp" />
-    <ClCompile Include="..\match_proc\tesseract\tesswrapper.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="stdafx.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\extra\config.h" />
-    <ClInclude Include="..\extra\convertimage.h" />
-    <ClInclude Include="..\extra\deskew.h" />
-    <ClInclude Include="..\extra\detectpoint.h" />
-    <ClInclude Include="..\extra\featurematch.h" />
-    <ClInclude Include="..\extra\linecontour.h" />
-    <ClInclude Include="..\extra\math\Math.h" />
-    <ClInclude Include="..\extra\math\mathutility.h" />
-    <ClInclude Include="..\extra\math\matrix44.h" />
-    <ClInclude Include="..\extra\math\plane.h" />
-    <ClInclude Include="..\extra\math\quaternion.h" />
-    <ClInclude Include="..\extra\math\ray.h" />
-    <ClInclude Include="..\extra\math\triangle.h" />
-    <ClInclude Include="..\extra\math\vector2.h" />
-    <ClInclude Include="..\extra\math\vector3.h" />
-    <ClInclude Include="..\extra\math\vector4.h" />
-    <ClInclude Include="..\extra\RecognitionConfig.h" />
-    <ClInclude Include="..\extra\rectcontour.h" />
-    <ClInclude Include="..\extra\rectcontour2.h" />
-    <ClInclude Include="..\extra\screencapture.h" />
-    <ClInclude Include="..\extra\skewdetect.h" />
-    <ClInclude Include="..\extra\squarecontour.h" />
-    <ClInclude Include="..\extra\utility.h" />
-    <ClInclude Include="..\extra\utility2.h" />
-    <ClInclude Include="..\match_proc\imagematch.h" />
-    <ClInclude Include="..\match_proc\match_manager.h" />
-    <ClInclude Include="..\match_proc\match_parser.h" />
-    <ClInclude Include="..\match_proc\match_proc.h" />
-    <ClInclude Include="..\match_proc\match_processor.h" />
-    <ClInclude Include="..\match_proc\match_result.h" />
-    <ClInclude Include="..\match_proc\match_script.h" />
-    <ClInclude Include="..\match_proc\match_shareddata.h" />
-    <ClInclude Include="..\match_proc\match_thread.h" />
-    <ClInclude Include="..\match_proc\tesseract\dictionary.h" />
-    <ClInclude Include="..\match_proc\tesseract\dictionary2.h" />
-    <ClInclude Include="..\match_proc\tesseract\errorcorrectcompare.h" />
-    <ClInclude Include="..\match_proc\tesseract\scanner.h" />
-    <ClInclude Include="..\match_proc\tesseract\tesswrapper.h" />
-    <ClInclude Include="stdafx.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

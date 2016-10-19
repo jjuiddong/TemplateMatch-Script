@@ -221,7 +221,7 @@ bool cDeSkew::DeSkew(
 		angle = -angle;
 
 	// 두 선의 길이가 거의 같다면, 4점을 기준으로 skew를 한다.
-	const int diffLen = abs((p1 - p2).Length() - (p3 - p4).Length());
+	const int diffLen = (int)abs((p1 - p2).Length() - (p3 - p4).Length());
 	if (diffLen < 20)
 	{
 		m_pts[0] = Point((int)_p1.x, (int)_p1.y);

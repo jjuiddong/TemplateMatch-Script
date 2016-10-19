@@ -1,6 +1,8 @@
 #pragma once
 
-#pragma warning(disable: 4819)
+#pragma warning(disable: 4819) // opencv header file, unicode format
+#pragma warning(disable: 4099)
+#pragma warning(disable: 4503) // boost
 
 
 #ifndef _CRT_SECURE_NO_WARNINGS
@@ -113,4 +115,4 @@ using namespace common;
 //------------------------------------------------------------------------------
 
 
-#include "../match_proc/matchproc.h"
+#include "../match_proc/match_proc.h"

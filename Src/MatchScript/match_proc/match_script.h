@@ -4,18 +4,18 @@
 //
 #pragma once
 
-#include "matchparser.h"
+#include "match_parser.h"
 
 
 namespace cvproc {
 	namespace imagematch
 	{
 
-		class cMatchScript2
+		class cMatchScript
 		{
 		public:
-			cMatchScript2();
-			virtual ~cMatchScript2();
+			cMatchScript();
+			virtual ~cMatchScript();
 
 			bool Read(const string &fileName);
 			void Exec();
@@ -24,12 +24,12 @@ namespace cvproc {
 
 
 		public:
-			void build(sParseTree *parent, sParseTree *prev, sParseTree *current);
-			int buildAttributes(const sParseTree *node, const string &str, vector<string> &attributes);
-			void setTreeAttribute(sParseTree *node, vector<string> &attribs);
-			void GetCloneMatchingArea(const cv::Mat &input, const string &inputName, const int inputImageId, sParseTree *node, 
-				OUT cv::Mat *out);
-			void clearResultTree();
+			void Build(sParseTree *parent, sParseTree *prev, sParseTree *current);
+			int BuildAttributes(const sParseTree *node, const string &str, vector<string> &attributes);
+			void SetTreeAttribute(sParseTree *node, vector<string> &attribs);
+// 			void GetCloneMatchingArea(const cv::Mat &input, const string &inputName, const int inputImageId, sParseTree *node, 
+// 				OUT cv::Mat *out);
+			void ClearResultTree();
 
 
 		public:

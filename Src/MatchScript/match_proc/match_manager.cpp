@@ -1,7 +1,7 @@
 
 #include "stdafx.h"
-#include "matchmanager.h"
-#include "matchprocessor.h"
+#include "match_manager.h"
+#include "match_processor.h"
 
 using namespace cvproc;
 using namespace cvproc::imagematch;
@@ -17,13 +17,13 @@ cMatchManager::~cMatchManager()
 }
 
 
-bool cMatchManager::Init(const string &filename, const string &executeLabel)
+bool cMatchManager::Init(const string &matchScriptFilename, const string &executeLabel)
 {
 	dbg::RemoveLog();
 	dbg::RemoveErrLog();
 
 	m_executeLabel = executeLabel;
-	return m_matchScript.Read(filename);
+	return m_matchScript.Read(matchScriptFilename);
 }
 
 
@@ -33,17 +33,26 @@ string cMatchManager::CaptureAndDetect()
 	capture.m_prtScrSleepTime = m_delayCapture;
 	Mat img = capture.ScreenCapture(true);
 	
-	cMatchResult result;
-	result.Init(&m_matchScript, img, "@input", 0,
+	cMatchResult *result = m_sharedData.AllocMatchResult();
+	if (!result)
+		return "";
+
+	result->Init(&m_matchScript, img, "@input", 
 		(sParseTree*)m_matchScript.FindTreeLabel(m_executeLabel), true, true);
-
-	cMatchProcessor::Get()->Match(result);
-
-	return result.m_resultStr;
+	cMatchProcessor::Get()->Match(*result);
+	const string str = result->m_resultStr;
+	m_sharedData.FreeMatchResult(result);
+	return str;
 }
 
 
 void cMatchManager::CaptureDelay(const int delayMilliSeconds)
 {
 	m_delayCapture = delayMilliSeconds;
+}
+
+
+void cMatchManager::Match(INOUT cMatchResult &mresult)
+{
+	cMatchProcessor::Get()->Match(mresult);
 }

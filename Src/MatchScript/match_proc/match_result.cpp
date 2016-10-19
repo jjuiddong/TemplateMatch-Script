@@ -1,6 +1,6 @@
 
 #include "stdafx.h"
-#include "MatchResult.h"
+#include "match_result.h"
 
 using namespace cv;
 using namespace cvproc;
@@ -8,6 +8,7 @@ using namespace cvproc::imagematch;
 
 
 cMatchResult::cMatchResult()
+	: m_sharedData(NULL)
 {
 	Clear();
 }
@@ -17,8 +18,8 @@ cMatchResult::~cMatchResult()
 }
 
 
-void cMatchResult::Init(cMatchScript2 *p, const cv::Mat &input, const string &inputName,
-	const int inputImageId, sParseTree *labelTree, const bool isRegisterInput, const bool isBlockMode)
+void cMatchResult::Init(cMatchScript *p, const cv::Mat &input, const string &inputName,
+	sParseTree *labelTree, const bool isRegisterInput, const bool isBlockMode)
 {
 	Clear();
 
@@ -28,12 +29,26 @@ void cMatchResult::Init(cMatchScript2 *p, const cv::Mat &input, const string &in
 	m_input = input.clone();
 	m_srcImage = input.clone();
 	m_inputName = inputName;
-	m_inputImageId = inputImageId;
 	m_registerInput = isRegisterInput;
 	m_removeInput = isRegisterInput;
 	m_blockMode = isBlockMode;
 	m_nodeLabel = labelTree;
 	m_beginTime = timeGetTime();
+
+	if (!labelTree)
+		m_resultStr = "not found label";
+
+	if (isRegisterInput || inputName.empty())
+	{
+		m_sharedData->SetInputImage2(input, m_inputName);
+	}
+	else
+	{
+		m_inputName = inputName;
+		m_sharedData->SetInputImage(input, inputName);
+	}
+
+	m_input = m_sharedData->LoadImage(m_inputName).clone();
 }
 
 
@@ -44,7 +59,6 @@ void cMatchResult::Clear()
 	m_input = Mat();
  	m_srcImage = Mat();
  	m_inputName.clear();
-	m_inputImageId = -1;
 	m_registerInput = true;
 	m_blockMode = false;
 	m_removeInput = false;

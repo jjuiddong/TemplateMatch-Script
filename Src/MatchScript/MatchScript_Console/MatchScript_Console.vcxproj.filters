@@ -3,21 +3,6 @@
   <ItemGroup>
     <ClCompile Include="stdafx.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="..\match_proc\matchparser.cpp">
-      <Filter>match_proc</Filter>
-    </ClCompile>
-    <ClCompile Include="..\match_proc\matchprocessor.cpp">
-      <Filter>match_proc</Filter>
-    </ClCompile>
-    <ClCompile Include="..\match_proc\MatchResult.cpp">
-      <Filter>match_proc</Filter>
-    </ClCompile>
-    <ClCompile Include="..\match_proc\matchthread.cpp">
-      <Filter>match_proc</Filter>
-    </ClCompile>
-    <ClCompile Include="..\match_proc\matchmanager.cpp">
-      <Filter>match_proc</Filter>
-    </ClCompile>
     <ClCompile Include="..\extra\featurematch.cpp">
       <Filter>extra</Filter>
     </ClCompile>
@@ -99,33 +84,30 @@
     <ClCompile Include="..\match_proc\tesseract\tesswrapper.cpp">
       <Filter>match_proc\tesseract</Filter>
     </ClCompile>
-    <ClCompile Include="..\match_proc\matchscript.cpp">
+    <ClCompile Include="..\match_proc\match_manager.cpp">
+      <Filter>match_proc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\match_proc\match_parser.cpp">
+      <Filter>match_proc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\match_proc\match_processor.cpp">
+      <Filter>match_proc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\match_proc\match_result.cpp">
+      <Filter>match_proc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\match_proc\match_script.cpp">
+      <Filter>match_proc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\match_proc\match_shareddata.cpp">
+      <Filter>match_proc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\match_proc\match_thread.cpp">
       <Filter>match_proc</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h" />
-    <ClInclude Include="..\match_proc\matchparser.h">
-      <Filter>match_proc</Filter>
-    </ClInclude>
-    <ClInclude Include="..\match_proc\matchprocessor.h">
-      <Filter>match_proc</Filter>
-    </ClInclude>
-    <ClInclude Include="..\match_proc\MatchResult.h">
-      <Filter>match_proc</Filter>
-    </ClInclude>
-    <ClInclude Include="..\match_proc\matchthread.h">
-      <Filter>match_proc</Filter>
-    </ClInclude>
-    <ClInclude Include="..\match_proc\imagematch.h">
-      <Filter>match_proc</Filter>
-    </ClInclude>
-    <ClInclude Include="..\match_proc\matchmanager.h">
-      <Filter>match_proc</Filter>
-    </ClInclude>
-    <ClInclude Include="..\match_proc\matchproc.h">
-      <Filter>match_proc</Filter>
-    </ClInclude>
     <ClInclude Include="..\extra\featurematch.h">
       <Filter>extra</Filter>
     </ClInclude>
@@ -213,7 +195,31 @@
     <ClInclude Include="..\match_proc\tesseract\tesswrapper.h">
       <Filter>match_proc\tesseract</Filter>
     </ClInclude>
-    <ClInclude Include="..\match_proc\matchscript.h">
+    <ClInclude Include="..\match_proc\imagematch.h">
+      <Filter>match_proc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\match_proc\match_manager.h">
+      <Filter>match_proc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\match_proc\match_parser.h">
+      <Filter>match_proc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\match_proc\match_proc.h">
+      <Filter>match_proc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\match_proc\match_processor.h">
+      <Filter>match_proc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\match_proc\match_result.h">
+      <Filter>match_proc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\match_proc\match_script.h">
+      <Filter>match_proc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\match_proc\match_shareddata.h">
+      <Filter>match_proc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\match_proc\match_thread.h">
       <Filter>match_proc</Filter>
     </ClInclude>
   </ItemGroup>

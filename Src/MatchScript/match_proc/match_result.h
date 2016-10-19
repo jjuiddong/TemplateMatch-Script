@@ -8,7 +8,8 @@
 namespace cvproc {
 	namespace imagematch {
 		
-		class cMatchScript2;
+		class cMatchScript;
+		class cSharedData;
 
 		class cMatchResult
 		{
@@ -16,25 +17,21 @@ namespace cvproc {
 			cMatchResult();
 			virtual ~cMatchResult();
 
-			void Init(cMatchScript2 *p, const cv::Mat &input, const string &inputName, 
-				const int inputImageId, sParseTree *labelTree, const bool isRegisterInput, 
-				const bool isBlockMode);
-			
+			void Init(cMatchScript *p, const cv::Mat &input, const string &inputName,
+				sParseTree *labelTree, const bool isRegisterInput, const bool isBlockMode);
 			void MatchComplete();
-
 			void TerminateMatch();
-
 			void Clear();
 
 
 		public:
 			// 입력
 			int m_traverseType;	 // 매칭 순회하는 방식 설정, {0 = 매칭되면 종료, 1=모드 매칭한후, 가장 접합률이 높은 노드 설정}
-			cMatchScript2 *m_script;
+			cMatchScript *m_script;
+			cSharedData *m_sharedData;
 			cv::Mat m_input;
 			cv::Mat m_srcImage; // 원본 입력 이미지, m_input 은 매칭될 때, 흑백영상으로 바뀐다.
-			string m_inputName;
-			int m_inputImageId;
+			string m_inputName; // @input+number
 			bool m_registerInput;
 			bool m_blockMode;
 			bool m_removeInput;
@@ -47,7 +44,7 @@ namespace cvproc {
 			bool m_isEnd;
 			int m_result;
 			int m_matchCount; // debug
-			int m_beginTime;
+			int m_beginTime; // debug
 
 			struct sNodeResult
 			{
